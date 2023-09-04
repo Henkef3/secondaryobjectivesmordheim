@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Card Shuffle</title>
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h1>Card Shuffle Game</h1>
+    
+    <!-- Main container -->
+    <div id="main-container">
+        <!-- Missions row -->
+        <div id="missions-row">
+            <div class="card mission-card">
+                <img src="Missions/MISSION_BACK.jpg" alt="Mission Card" class="card-img">
+                <button class="discard-btn" onclick="discardMission(this)">Discard</button>
+            </div>
+            <div class="card mission-card">
+                <img src="Missions/MISSION_BACK.jpg" alt="Mission Card" class="card-img">
+                <button class="discard-btn" onclick="discardMission(this)">Discard</button>
+            </div>
+            <div class="card mission-card">
+                <img src="Missions/MISSION_BACK.jpg" alt="Mission Card" class="card-img">
+                <button class="discard-btn" onclick="discardMission(this)">Discard</button>
+            </div>
+        </div>
+
+        <!-- Rewards row -->
+        <div id="rewards-row">
+            <div class="card reward-card">
+                <img src="Reward/REWARD_BACK.jpg" alt="Reward Card" class="card-img">
+                <button class="discard-btn" onclick="discardReward(this)">Discard</button>
+            </div>
+            <div class="card reward-card">
+                <img src="Reward/REWARD_BACK.jpg" alt="Reward Card" class="card-img">
+                <button class="discard-btn" onclick="discardReward(this)">Discard</button>
+            </div>
+        </div>
+
+        <!-- Shuffle Button -->
+        <button id="shuffle-btn" onclick="shuffleCards()">Shuffle</button>
+    </div>
+    
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
