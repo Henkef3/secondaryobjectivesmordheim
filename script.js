@@ -68,7 +68,7 @@ function finalizeCards() {
 		// Add 'How to Play' section
         newWindow.document.write('<div id="how-to-play" style="text-align:left; font-size:18px; font-weight:bold;">');
         newWindow.document.write('<p>How to Play:</p>');
-        newWindow.document.write('<p>If you succeed with a mission, you pair that Mission card with one Reward card. You then get the reward for that type. For example: A Mission: Attack gives the Reward: Attack. Each reward card can only be used once. If you complete your second mission, you have to pick the reward from your other reward card.</p>');
+        newWindow.document.write('<p>If you succeed with a mission, you randomely pick one reward card. You then get the reward for that same type as your Mission card. For example: A Mission: Attack gives the Reward: Attack. If you complete your second mission, you check your reward against the other reward card you have left.</p>');
         newWindow.document.write('</div>');
     }
 }
