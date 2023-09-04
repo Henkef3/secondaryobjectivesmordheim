@@ -38,6 +38,37 @@ function shuffleCards() {
     });
 }
 
+function finalizeCards() {
+    const missionElems = Array.from(document.querySelectorAll('.mission-card .card-img'));
+    const rewardElems = Array.from(document.querySelectorAll('.reward-card .card-img'));
+
+    const discardedMissions = missionElems.filter(img => img.src.endsWith('MISSION_BACK.jpg')).length;
+    const unshuffledRewards = rewardElems.filter(img => img.src.endsWith('REWARD_BACK.jpg')).length;
+
+    if (discardedMissions < 1 || discardedMissions > 1 || unshuffledRewards > 0) {
+        alert("Discard exactly one mission and make sure you've shuffled once to get your rewards.");
+    } else {
+        // Open new page and display non-discarded cards
+        const newWindow = window.open("", "Final Cards", "width=600,height=400");
+        newWindow.document.body.innerHTML = ""; // Clear old results
+        newWindow.document.write("<h1>Final Cards</h1>");
+        
+        missionElems.forEach((img) => {
+            if (!img.src.endsWith('MISSION_BACK.jpg')) {
+                newWindow.document.write(`<img src="${img.src}" width="100" height="150">`);
+            }
+        });
+        
+        rewardElems.forEach((img) => {
+            if (!img.src.endsWith('REWARD_BACK.jpg')) {
+                newWindow.document.write(`<img src="${img.src}" width="100" height="150">`);
+            }
+        });
+    }
+}
+
+
+
 // Function to repick a mission card (shuffle it individually)
 function repickMission(btnElement) {
     const parentDiv = btnElement.parentElement;

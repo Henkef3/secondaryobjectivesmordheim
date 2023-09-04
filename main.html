@@ -1,11 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Card Shuffle</title>
+    <title>Secondary Objectives Generator</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    <h1>Card Shuffle Game</h1>
+    <h1>Secondary Objectives Generator</h1>
+	
+	    <div id="instructions">
+        <p>Make sure to follow these steps:</p>
+        <ol>
+            <li>Each player tells their opponent if they have any Large Targets, Hired Swords, Spell Casters (not priests), Animals, or models that cannot gain experience (Zombies, Dogs, etc.), and their most expensive model gear-wise.</li>
+            <li>Decide which building on the table is "in the center," the tallest building, and what buildings count as temples, graveyards, or "religious" scenery.</li>
+            <li>Shuffle your cards.</li>
+            <li>Repick any missions you can't succeed with. For example, steal wyrdstones in a mission that doesn't contain wyrdstones or use black powder weapons when your warband isn't equipped with these.</li>
+            <li>Discard one and only one Mission Card that you don't want to do.</li>
+            <li>Click Finalize to get your final missions and rewards.</li>
+        </ol>
+    </div>
+	
     <div id="main-container">
         <!-- Missions row -->
         <div id="missions-row">
@@ -38,6 +51,10 @@
 
         <!-- Shuffle Button -->
         <button id="shuffle-btn" onclick="shuffleCards()">Shuffle</button>
+		
+		<!-- Finalize Button -->
+		<button id="finalize-btn" onclick="finalizeCards()">Finalize</button>
+		
     </div>
     <script src="script.js"></script>
 </body>

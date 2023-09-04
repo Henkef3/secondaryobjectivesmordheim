@@ -23,6 +23,10 @@ body {
     margin-top: 10px;
 }
 
+#instructions {
+    text-align: left;
+}
+
 #shuffle-btn {
     display: block;
     margin: 20px auto;
