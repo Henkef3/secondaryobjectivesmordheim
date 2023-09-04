@@ -15,9 +15,11 @@ body {
 }
 
 .card-img {
-    width: 100px;
-    height: 150px;
+    width: 400px;  /* Set the width */
+    height: 600px;  /* Set the height */
+    object-fit: cover;  /* Scale the image to cover the set dimensions, cropping if needed */
 }
+
 
 .discard-btn {
     margin-top: 10px;

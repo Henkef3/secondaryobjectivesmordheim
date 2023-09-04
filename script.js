@@ -55,13 +55,13 @@ function finalizeCards() {
         
         missionElems.forEach((img) => {
             if (!img.src.endsWith('MISSION_BACK.jpg')) {
-                newWindow.document.write(`<img src="${img.src}" width="100" height="150">`);
+                newWindow.document.write(`<img src="${img.src}" width="400" height="600" object-fit: cover>`);
             }
         });
         
         rewardElems.forEach((img) => {
             if (!img.src.endsWith('REWARD_BACK.jpg')) {
-                newWindow.document.write(`<img src="${img.src}" width="100" height="150">`);
+                newWindow.document.write(`<img src="${img.src}" width="400" height="600" object-fit: cover>`);
             }
         });
     }
