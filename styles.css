@@ -27,6 +27,8 @@ body {
 
 #instructions {
     text-align: left;
+    font-size: 18px;  /* Increase the font size */
+    font-weight: bold;  /* Make the text bold */
 }
 
 #shuffle-btn {
